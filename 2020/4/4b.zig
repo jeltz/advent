@@ -90,7 +90,7 @@ pub fn main() !void {
                         (val[5] >= '0' and val[5] <= '9' or val[5] >= 'a' and val[5] <= 'f') and
                         (val[6] >= '0' and val[6] <= '9' or val[6] >= 'a' and val[6] <= 'f')
                     ) {
-                        hcl = true;                        
+                        hcl = true;
                     }
                 }
                 if (std.mem.eql(u8, field, "ecl")) {
@@ -161,7 +161,7 @@ pub fn main() !void {
                 (val[5] >= '0' and val[5] <= '9' or val[5] >= 'a' and val[5] <= 'f') and
                 (val[6] >= '0' and val[6] <= '9' or val[6] >= 'a' and val[6] <= 'f')
                 ) {
-                hcl = true;                        
+                hcl = true;
             }
         }
         if (std.mem.eql(u8, field, "ecl")) {

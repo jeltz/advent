@@ -29,6 +29,6 @@ pub fn main() !void {
     }
 
     for (seats) |s, i| {
-        if (!s) std.debug.print("{}\n", .{i});        
+        if (!s) std.debug.print("{}\n", .{i});
     }
 }

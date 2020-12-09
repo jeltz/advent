@@ -36,7 +36,7 @@ pub fn main() !void {
         }
 
         if (count >= from and count <= to)  {
-            valid += 1;            
+            valid += 1;
         }
     } else |err| {
         std.testing.expect(err == error.EndOfStream);

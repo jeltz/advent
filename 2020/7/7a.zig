@@ -14,7 +14,7 @@ pub fn count(res: *ResMap, map: *ColorMap, key: []const u8) AllocationError!void
     if (vals != null) {
         for (vals.?.items) |c| {
             try count(res, map, c);
-        }    
+        }
     }
 }
 

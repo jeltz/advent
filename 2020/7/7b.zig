@@ -10,7 +10,7 @@ pub fn count(map: *ColorMap, key: []const u8) usize {
     if (vals != null) {
         for (vals.?.items) |c| {
            cn += count(map, c.color) * c.num;
-        }    
+        }
     }
 
     return cn;

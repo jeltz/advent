@@ -31,7 +31,7 @@ pub fn main() !void {
         const pwd = line[(j + 4)..];
 
         if (@boolToInt(pos1 < pwd.len and pwd[pos1] == char) ^ @boolToInt(pos2 < pwd.len and pwd[pos2] == char) == 1)  {
-            valid += 1;            
+            valid += 1;
         }
     } else |err| {
         std.testing.expect(err == error.EndOfStream);

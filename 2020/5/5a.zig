@@ -23,7 +23,7 @@ pub fn main() !void {
             if (c == 'B' or c == 'R') id |= 1;
         }
 
-        if (id > max) max = id; 
+        if (id > max) max = id;
     } else |err| {
         std.testing.expect(err == error.EndOfStream);
     }

@@ -41,6 +41,6 @@ pub fn main() !void {
             if (acc == G and size > 1) {
                 std.debug.print("{}\n", .{min + max});
             }
-        }        
+        }
     }
 }
