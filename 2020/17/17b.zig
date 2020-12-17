@@ -13,7 +13,7 @@ pub fn main() !void {
     const file = try std.fs.cwd().openFile(args[1], .{ .read = true });
     defer file.close();
 
-    var dim = try allocator.alloc([N][N][N]bool, N);
+    var dim = try allocator.create([N][N][N][N]bool);
 
     for (dim) |r, i| {
         for (r) |c, j| {
@@ -42,7 +42,7 @@ pub fn main() !void {
 
     var gen: usize = 0;
     while (gen < 6) : (gen += 1) {
-        var next = try allocator.alloc([N][N][N]bool, N);
+        var next = try allocator.create([N][N][N][N]bool);
 
         for (dim) |r, i| {
             for (r) |c, j| {
