@@ -33,22 +33,4 @@ pub fn main() !void {
             }
         }
     }
-
-    fool();
-}
-
-fn fool() void {
-    (f() { .foo = 1 }).foo;
-}
-
-fn bar() type {
-    return i32;
-}
-
-fn f() type {
-    const foo = "";
-
-    return struct {
-        foo(): bar(),
-    };
 }

@@ -27,8 +27,8 @@ pub fn main() !void {
     var x: usize = 1;
 
     while (x != pub1) {
-        x = x * sn % N;    
-        i += 1;    
+        x = x * sn % N;
+        i += 1;
     }
 
     sn = pub2;
@@ -36,8 +36,8 @@ pub fn main() !void {
     x = 1;
 
     while (j < i) {
-        x = x * sn % N;  
-        j += 1;  
+        x = x * sn % N;
+        j += 1;
     }
 
     std.debug.print("{}\n", .{x});
