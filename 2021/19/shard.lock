@@ -1,0 +1,6 @@
+version: 2.0
+shards:
+  matrix:
+    git: https://github.com/exilor/matrix.git
+    version: 0.1.0+git.commit.db74e62dcc0b65e548bf1a8eda65657310f57152
+
