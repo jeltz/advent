@@ -52,7 +52,6 @@ def f(sh, m, c, res)
   end
   if ok == sh.size && c < res[0]
     res[0] = c
-    p c
   end
 end
 
