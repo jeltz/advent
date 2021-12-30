@@ -16,7 +16,7 @@ SEEN = Hash(Array(Tuple(Char, Int32, Int32)), Int32).new
 
 def f(sh, m, c, res)
   shh = sh.sort
-  return if SEEN.fetch(shh, 1 << 30) <= c
+  return if SEEN.fetch(shh, Int32::MAX) <= c
   SEEN[shh] = c
   ok = 0
   sh.each_with_index do |(s, x, y), i|
@@ -67,6 +67,6 @@ m = Hash(Tuple(Int32, Int32), Char | Nil).new
   end
 end
 
-res = [1 << 30]
+res = [Int32::MAX]
 f(sh.sort, m, 0, res)
 puts res[0]
