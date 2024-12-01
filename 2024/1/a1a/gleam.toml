@@ -1,0 +1,7 @@
+name = "a1a"
+version = "1.0.0"
+
+[dependencies]
+argv = ">= 1.0.2 and < 2.0.0"
+gleam_stdlib = ">= 0.34.0 and < 2.0.0"
+simplifile = ">= 2.2.0 and < 3.0.0"
