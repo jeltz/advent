@@ -20,7 +20,7 @@ fn read_lines(path) {
 pub fn main() {
   let assert [infile, ..] = argv.load().arguments
 
-  let valid = read_lines(infile)
+  read_lines(infile)
     |> yielder.map(fn(line) {
       let l = string.trim_end(line)
       let levels = string.split(l, " ")
@@ -40,7 +40,6 @@ pub fn main() {
       }
     })
     |> yielder.filter(fn(b) { b })
-    |> yielder.length()
-
-  io.debug(valid)
+    |> yielder.length
+    |> io.debug
 }

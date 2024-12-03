@@ -33,9 +33,8 @@ pub fn main() {
   let left = list.sort(left, int.compare)
   let right = list.sort(right, int.compare)
 
-  let res = list.zip(left, right)
+  list.zip(left, right)
     |> list.map(fn(t) { int.absolute_value(t.0 - t.1) })
     |> list.fold(0, fn(x, y) { x + y })
-
-  io.debug(res)
+    |> io.debug
 }

@@ -30,7 +30,7 @@ pub fn main() {
       #([left, ..lists.0], [right, ..lists.1])
     })
 
-  let res = left
+  left
     |> list.map(fn(x) {
       {
         right
@@ -39,6 +39,5 @@ pub fn main() {
       } * x
     })
     |> list.fold(0, fn(x, y) { x + y })
-
-  io.debug(res)
+    |> io.debug
 }

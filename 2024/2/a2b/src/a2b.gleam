@@ -40,7 +40,7 @@ fn valid_dec(levels, skip) {
 pub fn main() {
   let assert [infile, ..] = argv.load().arguments
 
-  let valid = read_lines(infile)
+  read_lines(infile)
     |> yielder.map(fn(line) {
       let l = string.trim_end(line)
       let levels = string.split(l, " ")
@@ -52,7 +52,6 @@ pub fn main() {
       valid_inc(levels, False) || valid_dec(levels, False)
     })
     |> yielder.filter(fn(b) { b })
-    |> yielder.length()
-
-  io.debug(valid)
+    |> yielder.length
+    |> io.debug
 }
