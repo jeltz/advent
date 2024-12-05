@@ -34,10 +34,10 @@ pub fn main() {
     |> list.map(fn(x) {
       {
         right
-          |> list.filter(fn(y) { y == x })
+          |> list.filter(int.add)
           |> list.length
       } * x
     })
-    |> list.fold(0, fn(x, y) { x + y })
+    |> list.fold(0, int.add)
     |> io.debug
 }

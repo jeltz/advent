@@ -35,6 +35,6 @@ pub fn main() {
 
   list.zip(left, right)
     |> list.map(fn(t) { int.absolute_value(t.0 - t.1) })
-    |> list.fold(0, fn(x, y) { x + y })
+    |> list.fold(0, int.add)
     |> io.debug
 }

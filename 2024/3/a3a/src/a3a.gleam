@@ -22,8 +22,8 @@ pub fn main() {
           let assert Ok(x) = int.base_parse(x, 10)
           x
         })
-        |> list.fold(1, fn(x, y) { x * y })
+        |> list.fold(1, int.multiply)
     })
-    |> list.fold(0, fn(x, y) { x + y })
+    |> list.fold(0, int.add)
     |> io.debug
 }
